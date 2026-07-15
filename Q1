@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to My Website</title>
+
+    <style>
+        body{
+            background-color:lightblue;
+            font-family:Cambria;
+            font-size:14px;
+            text-align:center;
+            margin:20px;
+        }
+
+        h1,h2{
+            color:blue;
+        }
+
+        /* Scrolling Text */
+        .scroll-text{
+            overflow:hidden;
+            white-space:nowrap;
+            color:blue;
+            font-size:20px;
+            font-weight:bold;
+            animation:textmove 10s linear infinite;
+        }
+
+        @keyframes textmove{
+            from{transform:translateX(100%);}
+            to{transform:translateX(-100%);}
+        }
+
+        /* Scrolling Images */
+        .image-container{
+            overflow:hidden;
+            width:100%;
+            margin:30px 0;
+        }
+
+        .image-track{
+            display:flex;
+            width:max-content;
+            animation:imagemove 15s linear infinite;
+        }
+
+        .image-track img{
+            width:180px;
+            height:120px;
+            margin:10px;
+            border:3px solid blue;
+            border-radius:8px;
+        }
+
+        @keyframes imagemove{
+            from{transform:translateX(100%);}
+            to{transform:translateX(-100%);}
+        }
+
+        /* Button */
+        button{
+            background-color:blue;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            font-family:Cambria;
+            font-size:14px;
+            cursor:pointer;
+            border-radius:5px;
+        }
+
+        button:hover{
+            background-color:darkblue;
+        }
+
+        /* Grid Layout */
+        .grid-container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:15px;
+            margin-top:30px;
+        }
+
+        .grid-item{
+            background:white;
+            border:2px solid blue;
+            padding:20px;
+            color:blue;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Welcome to My Website</h1>
+
+<div class="scroll-text">
+    Welcome to My Website - Learn HTML, CSS and Web Design!
+</div>
+
+<div class="image-container">
+    <div class="image-track">
+        <img src="img1.jpg" alt="Image 1">
+        <img src="img2.jpg" alt="Image 2">
+        <img src="img3.jpg" alt="Image 3">
+        <img src="img4.jpg" alt="Image 4">
+
+        <!-- Duplicate images for smooth scrolling -->
+        <img src="img1.jpg" alt="Image 1">
+        <img src="img2.jpg" alt="Image 2">
+        <img src="img3.jpg" alt="Image 3">
+        <img src="img4.jpg" alt="Image 4">
+    </div>
+</div>
+
+<button>Click Here</button>
+
+<h2>Our Services</h2>
+
+<div class="grid-container">
+    <div class="grid-item">HTML</div>
+    <div class="grid-item">CSS</div>
+    <div class="grid-item">JavaScript</div>
+    <div class="grid-item">Bootstrap</div>
+    <div class="grid-item">React</div>
+    <div class="grid-item">Node.js</div>
+</div>
+
+</body>
+</html>
